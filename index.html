@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+     
+      <a-a-assets>
+        <a-asset-item id="bench" src="assets/bench/scene.gltf"></a-asset-item>
+        <a-asset-item id="street" src="assets/street/scene.gltf"></a-asset-item>
+        <a-asset-item id="lamp" src="assets/lamp/scene.gltf"></a-asset-item>
+        <a-asset-item id="cat" src="assets/cat/scene.gltf"></a-asset-item>
+        
+      </a-a-assets>
+
+      <a-sky src="https://image.freepik.com/free-vector/watercolor-dark-sky-background_23-2148496290.jpg"></a-sky>
+
+    
+      <a-entity shadow="receive:true;">
+        <a-entity gltf-model="#street" position="0 0 -1" rotation="0 90 0" scale="0.02 0.04 0.03"></a-entity>
+      </a-entity>
+
+      
+      <a-entity scale="1.5 1.5 1.5" gltf-model="#bench" position="0 0 3" shadow="cast:true;"></a-entity>
+
+      
+      <a-entity scale="0.5 0.5 0.5" gltf-model="#lamp" position="-6 0 0" shadow="cast:true;"></a-entity>
+
+     
+      <a-entity gltf-model="#cat" position="2 1 0" rotation="0 40 0" shadow="cast:true;" scale="0.01 0.01 0.01"></a-entity>
+
+      
+
+      <a-entity light="type: point; castShadow: true; color: #e6ca14; intensity: 2.35" position="-5.92951 8.39487 1.29438"></a-entity>
+      <a-entity light="type: ambient;"> </a-entity>
+
+    </a-scene>
+
+  </body>
+</html>
